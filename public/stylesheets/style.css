@@ -1,8 +1,6 @@
-body {
-  padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00b7ff;
+body{
+  margin: 20px;
+  background-image: url("/images/flying-drone.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }

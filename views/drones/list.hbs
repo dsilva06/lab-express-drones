@@ -1,1 +1,66 @@
-<h2>Available drones</h2>
+<h1>Available drones</h1>
+<button id="button-add"><a href="/drones/create-drones">Add Drone</a></button>
+<hr>
+{{#each drones}}
+<h2> Name: {{this.name}}</h2>
+<br>
+<h2>Amount of Propellers: {{this.propellers}}</h2>
+<br>
+<h2>Maximum speed: {{this.maxSpeed}}</h2>
+<div class="edit-delete">
+    <button id="edit-button"><a href="/drones/{{this._id}}/edit">Edit Drone</a></button>
+    <form action="/drones/{{this._id}}/remove" method="POST"><button id="delete-button" type="submit">Delete</button></form>
+</div>
+
+<br>
+<hr>
+{{/each}}
+
+<style>
+  
+    h1{
+        font-size: 2rem;
+
+    }
+    h2{
+        color: white;
+    }
+    a{
+        text-decoration: none;
+    }
+    #delete-button{
+        background-color: crimson;
+        color: white;
+        border: black solid 1px;
+        border-radius:5px;
+        height: 25px;
+        font-size: 1.2rem;
+        margin: 15px;
+    }
+    #edit-button{
+        background-color: skyblue;
+        border: black solid 1px;
+        border-radius:5px;
+        height: 25px;
+        font-size: 1.2rem;
+        margin: 15px;
+    }
+    #edit-button a{
+        color: black;
+    }
+    #button-add{
+        background-color: #ef5616;
+        border: black solid 1px;
+        border-radius:5px;
+        height: 30px;
+        font-size: 1.2rem;
+        margin-top: 15px;
+        margin-bottom: 60px;
+    }
+    #button-add a{
+        color: white;
+    }
+    .edit-delete{
+        display: flex;
+    }
+</style>
